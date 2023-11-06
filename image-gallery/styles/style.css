@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--background);
+    color: var(--font-color);
+
+
+}
+.gallery{
+    margin: 0 auto;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.gallery__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+.gallery__view::before{
+    content: '';
+    border-bottom: 5px solid orange;
+    width: 100%;
+}
+.gallery__logo{
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+.gallery__logo img{
+    height: 2em;
+    object-fit: cover;
+    object-position: center center;
+}
+.gallery__search{
+    display: flex;
+    align-items: center;
+    gap: 0.5em
+}
+
+.gallery__search-button{
+    height: 1em;
+}
+
+.gallery__view{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+.gallery__img-container{
+    display: block;
+    height: 256px;
+    aspect-ratio: calc(16/9);
+}
+
+.gallery__view img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 1em;
+}
+
+.gallery__footer {
+    padding: 1em;
+    display: flex;
+    height: 3.5em;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 0.5em;
+}
+
+.gallery__footer>* {
+    height: 100%;
+}
+.gallery__footer img {
+    height: 100%;
+}
+.gallery__footer a:hover img{
+    filter: invert(100%) sepia(2%) saturate(345%) hue-rotate(289deg) brightness(114%) contrast(100%);
+}
+
+.gallery__author {
+    display: flex;
+    justify-self: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.gallery__author>* {
+    height: 100%;
+}
+.search-control{
+    border: 1px solid orange;
+    border-radius: 25px;
+}
+.gallery__search-form{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    height: 3em;
+    border-radius: 1em;
+    border: 2px solid orange;
+    padding: 0.3em 0.7em;
+
+}
+.gallery__search-form input[name="keyword"] {
+    width: 7em;
+}
+
+.gallery__search-form input{
+    background-color: transparent;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+}
